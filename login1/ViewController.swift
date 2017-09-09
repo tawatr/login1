@@ -10,6 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    var userString=""
+    var passString=""
+    var statusString=""
+    
+    let loginDict=[ "user1": "pass1", "user2": "pass2"]
+    
+    @IBOutlet weak var user: UITextField!
+    
+    
+    @IBOutlet weak var pass: UITextField!
+    
+    
+    @IBOutlet weak var status: UILabel!
+    
+    
+    @IBAction func loginButton(_ sender: Any) {
+        userString=user.text!
+        passString=pass.text!
+        print( "Check feed in" )
+        print( "Username: \(userString)")
+        print( "Password: \(passString)")
+        
+        status.text="test"
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
